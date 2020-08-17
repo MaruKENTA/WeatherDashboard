@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Weather Dashboard</title>
-    
+
 </head>
 
 <body>
@@ -24,23 +24,73 @@
             <div class="col-3 searchCol">
 
                 <h5>Search for a City:</h5>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="cityInput" placeholder="City Name">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-primary" type="button" id="citySearchBtn">
+                <form class="form-inline my-2 my-lg-0 mt-3 ml-3">
+                    <input class="form-control mr-sm-2 float-left" type="search" placeholder="Search" id= "search_bar" aria-label="Search">
+                    <button id="searchbtn" class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search">
                             <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
                                 <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
                             </svg>
-                        </button>
+                        </i>
+                    </button>
+                </form>
+
+                <div class="today-weather col-9">
+                    <div class="bg-light">
+                        <h2 id="name_of_city"></h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <p id="today_temp"></p>
+                                <p id="today_humidity"></p>
+                                <p id="today_wind_speed"></p>
+                                <img id="today_icon_div" src="">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-9">
-                    <div class="card" id="weatherContainer"></div>
-                    <div id="forecastContainer"></div>
-                </div>
+                <div class="five-day-div">
+                    <h4>5-Day Forecast:</h4>
+                    <div class="row justify-content-center">
 
+                        <div id="day0" class="card-body">
+                            <h5 id="0date"></h5>
+                            <p id="0five_day_temp"></p>
+                            <p id="0five_day_humidity"></p>
+                            <img id="0five_day_icon" src="">
+                        </div>
+
+                        <div id="day1" class="card-body">
+                            <h5 id="1date"></h5>
+                            <p id="1five_day_temp"></p>
+                            <p id="1five_day_humidity"></p>
+                            <img id="1five_day_icon" src="">
+                        </div>
+
+                        <div id="day2" class="card-body">
+                            <h5 id="2date"></h5>
+                            <p id="2five_day_temp"></p>
+                            <p id="2five_day_humidity"></p>
+                            <img id="2five_day_icon" src="">
+                        </div>
+
+                        <div id="day3" class="card-body">
+                            <h5 id="3date"></h5>
+                            <p id="3five_day_temp"></p>
+                            <p id="3five_day_humidity"></p>
+                            <img id="3five_day_icon" src="">
+                        </div>
+
+                        <div id="day4" class="card-body">
+                            <h5 id="4date"></h5>
+                            <p id="4five_day_temp"></p>
+                            <p id="4five_day_humidity"></p>
+                            <img id="4five_day_icon" src="">
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
