@@ -1,8 +1,6 @@
-header {
+jumbotron {
     background-color: gray;
     color: white;
-    font-size: 30px;
-    text-align: center;
 }
 
 .favorable {
